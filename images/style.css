@@ -1,0 +1,137 @@
+@font-face {
+    font-family: overpass;
+    src: url(static/Overpass-Bold.ttf);
+    src: url(static/Overpass-Light.ttf);
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: overpass;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+}
+
+.container {
+    margin: 150px auto;
+    width: 400px;
+    border-radius: 30px;
+    height: 420px;
+    background: hsl(215, 17%, 14%);
+    display: flex;
+    padding: 35px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .star .s {
+    padding-top: 5px;
+}
+
+.container .star {
+    padding: 12px 15px;
+    border-radius: 50%;
+    background-color: var(--DarkBlue);
+}
+
+.container h3 {
+    color: white;
+    font-size: 25px;
+    word-spacing: 2px;
+    margin: 30px 0 20px 0;
+}
+
+.container p {
+    color: var(--MediumGrey);
+    word-spacing: 2px;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.container .rates {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .rates div {
+    background-color: var(--DarkBlue);
+    color: var(--MediumGrey);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container .rates .active {
+    background-color: var(--LightGrey);
+    color: white;
+}
+
+.container .rates div:hover {
+    background-color: var(--Orange);
+    color: white;
+}
+
+.container .btn {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.container button {
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 3px;
+    transition: .2s;
+}
+
+.container button:hover {
+    background-color: white;
+    color: var(--Orange)
+}
+
+@media (max-width:376px) {
+    .container {
+        width: 80%;
+        height: 400px;
+    }
+    .container h3 {
+        font-size: 20px;
+    }
+    .container p {
+        font-size: 11px;
+    }
+    .container .rates div {
+        width: 30px;
+        font-size: 12px;
+        height: 30px;
+        padding: 15px 15px;
+    }
+}
